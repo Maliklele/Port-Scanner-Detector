@@ -1,0 +1,2 @@
+nmap -p 1000-5015 192.168.42.129
+#to generate port scans
