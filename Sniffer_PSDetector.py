@@ -101,7 +101,7 @@ def analyzing():
             longestSubSequence = findLongestConseqSubseq(pdsus, len(pdsus))
             if longestSubSequence >= CONSECUTIVE_PORTS_FLAG:
                 caughtPortDetectionHost.append(
-                    'Scanner detected. The scanner originated from host '+str(i)+' with '+str(longestSubSequence)+'subsequnce')
+                    'Scanner detected. The scanner originated from host '+str(i)+' with '+str(longestSubSequence)+' subsequnce')
 
         #Printing the detected scanners
         for x in range(len(caughtPortDetectionHost)):

@@ -1,16 +1,23 @@
 
+#ABDULMALIK ALSENANO
+#201782610
+
 import nmap
 nmScan = nmap.PortScanner()
 
-ip='192.168.42.12'
+#Inputs
+ip='1.1.1.1'
+port=80
 
+#Start the scan
+r=nmScan.scan(ip, str(port))
 
-r=nmScan.scan(ip, '80',sudo= '-F')
-
-
+#Get the results
 sPort = r['nmap']['scaninfo']['tcp']['services']
 sTimeElapsed = r['nmap']['scanstats']['elapsed']
-sPortState = r['scan'][ip]['tcp'][80]['state']
+sPortState = r['scan'][ip]['tcp'][port]['state']
+
+#Print results
 print("Port number: ",sPort)
 print("Time Elapsed: ",sTimeElapsed+'s')
 print("Port state: ",sPortState)
